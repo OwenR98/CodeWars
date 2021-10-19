@@ -1,0 +1,14 @@
+def accum(s):
+    
+    sList = list(s)
+    fList = list()
+    ind = 0
+    
+    for i in sList:
+        ind += 1
+        tList = (sList[ind - 1] * ind).title()
+        fList.append(tList)
+    
+    joiner = '-'.join(fList)
+    
+    return joiner
