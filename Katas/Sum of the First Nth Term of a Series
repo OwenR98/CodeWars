@@ -1,0 +1,19 @@
+def series_sum(n):
+    
+    z = 0
+    count = n
+    
+    if n == 0:
+        return "0.00"
+    elif n == 1:
+        return "1.00"
+    else:
+        while count != 1:
+            count -= 1
+            i = (((count ) * 3) + 1)
+            x = 1 / i   
+            z += x
+        
+        y = z + 1
+        print (str(y))
+        return str("{:.2f}".format(y))
