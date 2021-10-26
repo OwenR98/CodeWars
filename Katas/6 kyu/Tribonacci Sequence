@@ -1,0 +1,13 @@
+def tribonacci(signature, n):
+    
+    if n == 0:
+        return []
+    else:
+        if len(signature) > n:
+            return signature[0:n]
+        else:
+            while len(signature) < n:
+                new = sum(signature[-3:])
+                signature.append(new)
+        
+        return signature
