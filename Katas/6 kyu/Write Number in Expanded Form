@@ -1,0 +1,19 @@
+def expanded_form(num):
+    l = list(str(num))
+    st = ""
+    for x,y in enumerate(l):
+        if int(l[x]) > 0 and x != len(l) - 1:
+            print (l[x],l[-2])
+            st += (l[x] + ("0" * ((len(l) - x) - 1))) + " + "
+        elif int(l[x]) > 0:
+            st += (l[x] + ("0" * ((len(l) - x) - 1)))
+        else:
+            continue
+            
+    if int(l[-1]) == 0:
+        bl = list(st)
+        lst = bl[:len(bl)-3]
+        lst = ''.join(lst)
+        return lst
+    
+    return st
