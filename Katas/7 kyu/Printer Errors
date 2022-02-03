@@ -1,0 +1,17 @@
+import re
+
+def printer_error(s):
+    ind = 0
+    matches = 0
+    control = list(s)
+    test = re.compile("[n-z]+")
+    
+    for i in control:
+        ind += 1
+        if test.match(control[ind - 1]) is not None:
+            matches +=1
+        
+    occurenceRate = (str(matches) + '/' + str(len(control)))
+        
+    return occurenceRate
+    

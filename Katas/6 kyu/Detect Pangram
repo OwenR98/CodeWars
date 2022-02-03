@@ -1,0 +1,6 @@
+import string
+
+def is_pangram(s):
+    
+    alph = set(string.ascii_lowercase)
+    return set(s.lower()) >= alph

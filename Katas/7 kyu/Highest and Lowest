@@ -1,0 +1,21 @@
+def high_and_low(numbers):
+    
+    numb = numbers.split()
+    
+    lowest = numb[0]
+    highest = numb[0]
+    
+    for x, y in enumerate(numb):
+        
+        if int(y) > int(highest):
+            highest = y
+        elif int(y) < int(lowest):
+            lowest = y
+        else:
+            pass
+        
+    finalL = str(lowest)
+    finalH = str(highest)
+    
+    end = finalH + ' ' +finalL
+    return end
