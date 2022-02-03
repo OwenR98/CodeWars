@@ -1,0 +1,10 @@
+def square_digits(num):
+    init = list(str(num))
+    squared = list()
+    for x in init:
+        y = int(x)
+        z = y * y
+        l = str(z)
+        squared.append(l)
+    
+    return int(''.join(squared))

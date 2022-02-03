@@ -1,0 +1,28 @@
+import math
+
+def nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth):
+    
+    total = startPriceOld
+    totalSavings = 0.0
+    months = 0.0
+    totalLoss = 0.0
+    lossRate = percentLossByMonth
+    eList = list()
+    
+    while total < startPriceNew:
+        months += 1
+        totalSavings += savingperMonth
+        
+        if months % 2 == 0:
+            lossRate += 0.5
+        
+        oCar = (startPriceOld / 100) * lossRate
+        startPriceOld -= oCar
+        nCar = (startPriceNew / 100) * lossRate
+        startPriceNew -= nCar
+        
+        total = startPriceOld + totalSavings
+        
+    eList.append(int(months))
+    eList.append(int(round(total - startPriceNew)))
+    return eList

@@ -1,0 +1,9 @@
+def number(bus_stops):
+    
+    total = 0
+    
+    for y in bus_stops:
+        people = y[0] - y[1]
+        total += people
+        
+    return total

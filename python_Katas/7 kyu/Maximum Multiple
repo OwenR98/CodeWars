@@ -1,0 +1,6 @@
+def max_multiple(divisor, bound):
+    m = 2
+    while divisor * m <= bound:
+        m += 1
+    else:
+        return divisor * (m - 1)

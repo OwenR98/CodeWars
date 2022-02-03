@@ -1,0 +1,12 @@
+import re
+
+def count_smileys(arr):
+    count = 0
+    
+    if len(arr) == 0:
+        return 0
+    else:
+        for x, i in enumerate(arr):
+            if re.match("(:|;)(|(-|~))(\)|D)",arr[x]):
+                count += 1
+        return count
