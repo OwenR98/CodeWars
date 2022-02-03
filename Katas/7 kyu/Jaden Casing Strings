@@ -1,6 +1,0 @@
-def to_jaden_case(string):
-
-    x = string.split()
-    s = ' '.join(i.capitalize() for i in x)
-    
-    return s
