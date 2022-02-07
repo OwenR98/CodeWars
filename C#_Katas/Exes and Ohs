@@ -1,0 +1,49 @@
+using System.Linq;
+using System;
+using System.Collections.Generic;
+
+public static class Kata 
+{
+  public static bool XO (string input)
+  { 
+    List<string> charList = new List<string>();
+    
+    foreach (char c in input)
+    {
+      char lowerChar = '\0';
+      lowerChar = c;
+      lowerChar = char.ToLower(lowerChar);
+      charList.Add(lowerChar.ToString()); 
+    }
+    
+    int lstLength = charList.Count;
+    int xs = 0;
+    int os = 0;
+    
+    for (int i = 0; i < lstLength; i ++)
+    {
+      if (charList[i] == "x")
+      {
+        xs++;
+      }
+      else if (charList[i] == "o")
+      {
+        os++;
+      }
+      else
+      {
+        //doNothing
+      }
+    }
+    
+    if (xs == os)
+    {
+      return true;  
+    }
+    else
+    {
+      return false;  
+    }
+    
+  }
+}
