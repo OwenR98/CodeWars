@@ -1,0 +1,50 @@
+public class Kata
+{
+  public int Min(int[] list)
+  {
+    int placeHolderNum = 0;
+    int count = 0;
+    
+    foreach (int i in list)
+    {
+      if (count > 0)
+      {
+        if (placeHolderNum > i)
+        {
+          placeHolderNum = i;
+          count++;
+        }
+      }
+      else
+      {
+        placeHolderNum = i;
+        count++;
+      }
+    }
+    return placeHolderNum;
+  }
+  
+  public int Max(int[] list)
+  {
+    int placeHolderNum = 0;
+    int count = 0;
+    
+    foreach (int i in list)
+    {
+      if (count > 0)
+      {
+        if (placeHolderNum < i)
+        {
+          placeHolderNum = i;
+          count++;
+        }
+      }
+      else
+      {
+        placeHolderNum = i;
+        count++;
+      }
+    }
+    return placeHolderNum;
+  }
+}
