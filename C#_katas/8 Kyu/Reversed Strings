@@ -1,0 +1,26 @@
+// This coding cata, the challenge was to take an unknown string, and return is backwards.
+// E.G 'World' would become 'dlroW'
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public static class Kata
+{
+  public static string Solution(string str) 
+  {
+    
+    char[] characters = str.ToCharArray(); // Create a char array for each char of the input string.
+    List<string> lets = new List<string>(); // Declare an empty list for iterative logic.
+    
+    foreach (char i in characters) // Iterate through each index of the char array
+      {
+        lets.Insert(0, i.ToString()); // Insert each char as a string in the list at index 0 to make it backwards.
+      }
+    
+    string combinedString = string.Join( "", lets.ToArray() ); // Flatten the list into a string.
+    
+    return combinedString; // Return the reversed string.
+    
+  }
+}
