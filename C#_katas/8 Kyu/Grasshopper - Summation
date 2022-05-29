@@ -1,0 +1,19 @@
+// Given a number 'n' find the summation of every number leading up to and including it.
+// E.G. 3 = 1+2+3 which = 6.
+
+using System;
+
+public static class Kata 
+{
+    public static int summation(int num)
+    {
+      int PlaceholderVariable = 0;
+      
+      while (num > 0)
+      {
+        PlaceholderVariable += num;
+        num --;
+      }
+      return PlaceholderVariable;
+    }
+}
