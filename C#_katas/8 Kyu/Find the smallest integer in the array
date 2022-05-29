@@ -1,0 +1,23 @@
+// This program is designed to iterate through an array and find the smallest number within the array and return it.
+
+using System;
+
+public class Kata 
+{
+    public static int FindSmallestInt(int[] args) 
+    {
+      int PlaceHolderVariable = args[0];
+      int ArrLength = ((args.Length) - 1);
+      int i = 0;
+      
+      while (i <= ArrLength)
+        {
+          if (args[i] < PlaceHolderVariable)
+            {
+              PlaceHolderVariable = args[i];
+            }
+          i ++;
+        }
+      return PlaceHolderVariable;
+    }
+}
