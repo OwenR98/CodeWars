@@ -1,0 +1,33 @@
+using System;
+using System.Linq;
+
+public static class Kata
+{
+  public static int Sum(int[] numbers)
+  {
+    int MaxValue;
+    int MinValue;
+    int MinusTotal;
+    int Total;
+    
+    try
+    {
+      if (numbers.Length > 1)
+      {
+        MaxValue = numbers.Max();
+        MinValue = numbers.Min();
+        MinusTotal = MaxValue + MinValue;
+        Total = numbers.Sum() - MinusTotal;
+        return Total;
+      }
+      else
+      {
+        return 0;
+      }
+    }
+    catch
+    {
+      return 0;
+    }
+  }
+}
