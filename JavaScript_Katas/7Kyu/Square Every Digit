@@ -1,0 +1,23 @@
+function squareDigits(num){
+  
+  let res = [];
+  let strNum = num.toString();
+  let newArr = []
+  
+  for (char in strNum)
+    {
+      res.push(strNum[char]);
+    }
+  
+  for (x in res)
+    {
+      let tempVar = parseInt(res[x]);
+      let newTempVar = tempVar * tempVar;
+      newTempVar = newTempVar.toString();
+      newArr.push(newTempVar);
+    }
+
+  let finalStr = newArr.join('');
+  finalStr = parseInt(finalStr);
+  return finalStr;
+}
