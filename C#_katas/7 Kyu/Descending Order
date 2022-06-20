@@ -1,0 +1,25 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public static class Kata
+{
+  public static int DescendingOrder(int num)
+  {
+    var str1 = num.ToString();
+    var intList = str1.Select(x => Convert.ToInt32(x.ToString())).ToList();
+    var placeHolderList = new List<int>();
+    var listLen = intList.Count;
+    
+    for (int i = 0 ; i < listLen ; i++)
+    {
+      placeHolderList.Add(intList.Max());  
+      intList.Remove(intList.Max());
+    }
+    
+    var concat = string.Join("", placeHolderList.Select(x => x.ToString()).ToArray());
+    var concatInt = Int32.Parse(concat);
+    
+    return concatInt;
+  }
+}
