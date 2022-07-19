@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Kata
+{
+  public static string DuplicateEncode(string word)
+  {
+    List<char> holdList = new List<char>();
+    List<string> secondList = new List<string>();
+    
+    foreach (char x in word)
+    {
+      if (char.IsUpper(x))
+      {
+        char y = char.ToLower(x);
+        holdList.Add(y);
+      }
+      else
+      {
+        holdList.Add(x);
+      }
+    }
+    
+    foreach (char x in holdList)
+    {
+      if (holdList.Where(temp => temp.Equals(x)).Select(temp => temp).Count() > 1)
+      {
+        secondList.Add(")");
+      }
+      else
+      {
+        secondList.Add("(");
+      }         
+    }
+    
+    return String.Join("",secondList);
+  }
+}
